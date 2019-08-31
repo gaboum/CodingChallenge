@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coding Challenge</title>
+    
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+	<div class="Category-page---v2---mobile---Mortgage-Calculator-v02---writing">
+        <div class="wrapper">
+          <div class="container">
+            <h1 class="Mortgage-Calculator">Mortgage Calculator</h1>
+            <hr class="Line">
+          </div>
+          <div class="Rectangle-35">
+            <div id="form" class="container">
+              <h1 class="Change-values-to-cal">Change values to calculate your results</h1>
+              <hr class="Line">
+              <div class="optionGroup">
+                <h3>Years of mortage</h3>
+                <div class="userInputs">
+                  <div class="rangeSlider mortgage-slider">
+                    <span class="valNumbers min">1</span><input class="rangeInputControl" type="range" value="10" min="1" max="40" step="1"><span class="valNumbers max">40</span>
+                  </div><input id="mortgageInput" class="inputValue" type="number" value="30" disabled>
+                </div>
+              </div>
+              <div class="optionGroup">
+                <h3>Rate of interest (%)</h3>
+                <div class="userInputs">
+                  <div class="rangeSlider interest-slider">
+                    <span class="valNumbers min">0.1</span><input class="rangeInputControl" type="range" value="8.0" min="0.1" max="10" step="0.1"><span class="valNumbers max">10</span>
+                  </div><input id="interestInput" class="inputValue" type="number" value="8.0" disabled>
+                </div>
+              </div>
+              <div class="optionGroup">
+                <h3>Loan Amount</h3>
+                <div class="userInputs">
+                  <span class="loanSpan"><input class="loan-amount" type="number" value="100000"></span>
+                </div>
+              </div>
+              <div class="optionGroup two-opts">
+                <div class="subOptionGroup">
+                  <h3>Annual Tax</h3>
+                  <div class="userInputs">
+                    <span class="loanSpan"><input id="annual-tax" class="annual-inputs" type="number" value="1000"></span>
+                  </div>
+                </div>
+                <div class="subOptionGroup">
+                  <h3>Annual Insurance</h3>
+                  <div class="userInputs">
+                    <span class="loanSpan"><input id="annual-insurance" class="annual-inputs" type="number" value="300"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="optionGroup"></div><button id="btn_calc" class="submit">calculate</button>
+            </div>
+            <div class="resultsBox" >
+              <div class="container">
+                    <h1 class="Your-results">Your results</h1>
+                    <div class="resultList">
+                      <div>
+                        <span class="Principle-Interest">Principle & Interest</span> <span id="out-pi" class="firstBalance">$ 733.27</span>
+                      </div>
+                      <hr class="line">
+                      <div>
+                        <span class="Principle-Interest">Tax</span> <span id="out-tax" class="firstBalance">$ 733.27</span>
+                      </div>
+                      <hr class="line">
+                      <div>
+                        <span class="Principle-Interest">Insurance</span> <span id="out-insurance" class="firstBalance">$ 733.27</span>
+                      </div>
+                      <hr class="line">
+                      <div>
+                        Total Monthly Payment <span id="out-total" class="totalBalance">$ 841.60</span>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/assets/js/main.js"></script>
+</body>
+</html>

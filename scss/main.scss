@@ -1,0 +1,471 @@
+@import 'reset';
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Neue Light'), url('/assets/fonts/HelveticaNeueLight.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Helvetica Neue Bold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Helvetica Neue Bold'), url('/assets/fonts/HelveticaNeueBold.woff') format('woff');
+        }
+        
+
+$font-stack:    'Helvetica Neue Light', sans-serif;
+$font-bold-stack:    'Helvetica Neue Bold', sans-serif;
+$white-color: #fff;
+$gray-light-color: #cacaca;
+$gray-border-color: #a6a6a6;
+$blue-light-color: #006ea0;
+$blue-color: #1091cc;
+$blue-button-color: #0077c0;
+$black-color: #3e3d3f;
+$black-shadow-color: rgba(0, 0, 0, 0.1);
+$black-shadowest-color: rgba(62, 61, 63, 0.62);
+
+
+
+
+
+
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+    width: 320px;
+    height: 900px;
+    background-color: $white-color;
+    font-family: $font-stack;
+    
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+    }
+    
+    
+    input[type="range"] {
+        -webkit-appearance: none;
+        -moz-apperance: none;
+        border-radius: 6px;
+        height: 6px;
+    }
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        background-color: $white-color;
+        border: 1px solid $gray-light-color;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px
+    }
+    .Line {
+        width: 260px;
+        height: 2px;
+        border: solid 1px $gray-light-color;
+      }
+    .wrapper {
+        width: 300px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        .container {
+            width: 260px;
+            margin: auto;
+
+            .Mortgage-Calculator {
+                width: 220px;
+                height: 24px;
+                font-family: $font-stack;
+                font-size: 20px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.2;
+                letter-spacing: 0.5px;
+                text-align: left;
+                color: $blue-light-color;
+                padding-top: 23px;
+            }
+            
+        }
+
+        .Rectangle-35 {
+            width: 300px;
+            height: 431px;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+            background-color: $white-color;
+            margin: auto;
+            
+            
+            .Change-values-to-cal {
+              padding-top: 15px;
+              width: 260px;
+              height: 20px;
+              font-family: $font-stack;
+              font-size: 12px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.67;
+              letter-spacing: 0.21px;
+              text-align: left;
+              color: $black-color;
+            }
+            
+            .Years-of-mortgage {
+              width: 109px;
+              height: 20px;
+              font-family: $font-stack;
+              font-size: 12px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.67;
+              letter-spacing: 0.17px;
+              text-align: left;
+              color: $black-color;
+            }
+            
+            .Rate-of-interest- {
+              width: 114px;
+              height: 20px;
+              font-family: $font-stack;
+              font-size: 12px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.67;
+              letter-spacing: 0.17px;
+              text-align: left;
+              color: $black-color;
+            }
+            
+            .rangeInputControl {
+                  background: linear-gradient(to right, $blue-color 0%, $blue-color 50%, $gray-light-color 50%, $gray-light-color 100%);
+                  border: solid 1px $gray-light-color;
+                  border-radius: 8px;
+                  height: 7px;
+                  
+                  outline: none;
+                  transition: background 450ms ease-in;
+                  -webkit-appearance: none;
+              }
+              #form h1,
+              #form h3,
+              #btn_calc {
+                  font-size: 12px;
+              }
+              
+              .optionGroup {
+                  margin: 8px 0;
+              }
+              .optionGroup h3 {
+                  margin: 8px 0;
+                  font-family: $font-bold-stack;
+                  font-weight: bold;
+              }
+              .optionGroup .userInputs {
+                  display: flex;
+                  align-items: center;
+              }
+              .rangeSlider {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 200px;
+                  margin-right: 10px;
+              }
+              .loan-amount {
+                  width: 242px;
+                  height: 40px;
+                  border-radius: 4px;
+                  border: solid 1px $gray-border-color;
+                  background-color: $white-color;
+                  padding-left: 16px;
+              }
+              .loan-amount:focus,
+              .annual-inputs:focus {
+                  outline: none;
+                  height: 40px;
+                  border-radius: 4px;
+                  box-shadow: 0 0 4px 0 $black-shadowest-color;
+                  border: solid 1px $black-color;
+                  background-color: $white-color;
+              }
+              .loanSpan {
+                  position: relative;
+                  display: inline-block;
+              }
+              .loanSpan:before {
+                  content: "$";
+                  font-size: 14px;
+                  position: absolute;
+                  left: 8px;
+                  top: 50%;
+                  transform: translateY(-50%);
+              }
+              .annual-inputs {
+                  width: 120px;
+                  height: 40px;
+                  border-radius: 4px;
+                  border: solid 1px $gray-border-color;
+                  background-color: $white-color;
+              
+              }
+              .valNumbers {
+                  width: 16px;
+              }
+              .inputValue {
+                  width: 50px;
+                  height: 40px;
+                  border-radius: 4px;
+                  border: solid 1px $gray-border-color;
+                  background-color: $white-color;
+                  text-align: center;
+              }
+              .two-opts {
+                  display: flex;
+                  justify-content: space-between;
+              }
+              
+              
+              
+              .subOptionGroup .userInputs input {
+                  width: 102px;
+                  padding-left: 16px;
+              }
+              
+              
+              #btn_calc {
+                  width: 260px;
+                  height: 40px;
+                  border-radius: 4px;
+                  background-color: $blue-button-color;
+                  border: none;
+                  color: $white-color;
+                  text-transform: uppercase;
+              }
+              .submit {
+                  width: 79px;
+                  height: 17px;
+                  font-family: $font-stack;
+                  font-size: 14px;
+                  font-weight: bold;
+                  font-style: normal;
+                  font-stretch: normal;
+                  line-height: normal;
+                  letter-spacing: 0.58px;
+                  text-align: center;
+                  color: $white-color;
+              }
+            
+              .resultsBox {
+                  visibility: hidden;
+                  height: 0;
+                  transition: all .3s ease-in-out;
+              }
+              .resultsBox.show {
+                  visibility: visible;
+                position:relative;
+                width: 300px;
+                height: 289px;
+                background-color: #eaf6fa;
+                z-index: -1;
+            }
+            .resultList div {
+                display: flex;
+                justify-content: space-between;
+            }
+            .Your-results {
+              width: 108px;
+              height: 30px;
+              font-family: HelveticaNeue;
+              font-size: 20px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
+              color: #3e3d3f;
+              padding-top: 41px;
+            }
+            .Principle-Interest {
+              width: 98px;
+              height: 14px;
+              font-family: SFUIDisplay;
+              font-size: 12px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: left;
+              color: #3e3d3f;
+            }
+            .firstBalance {
+              width: 59px;
+              height: 16px;
+              font-family: SFUIDisplay;
+              font-size: 14px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: right;
+              color: #3e3d3f;
+            }
+            .totalBalance {
+              width: 76px;
+              height: 21px;
+              font-family: SFUIDisplay;
+              font-size: 18px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: right;
+              color: #3e3d3f;
+            }
+    
+
+          }
+
+                 
+    }
+
+    
+        
+    
+  }
+  @media screen and (min-device-width: 321px) {
+    .Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+        width: 100%; 
+
+        .wrapper {
+            width: 90%;
+
+            .Rectangle-35 {
+                width: 100%;
+            }
+        }
+    }
+  }
+
+  @media screen and (min-device-width: 900px) {
+    .Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+        background-color: whitesmoke;
+        width: 900px;
+        height: 700px;
+        margin: auto;
+    }
+    .wrapper {
+        width: 100% !important; //470px !important;
+        margin: 0 !important;
+
+        > .container {
+            width: 390px !important;
+            margin-left: 30px !important;
+            
+            h1 {                
+                width: 654.9px !important;
+                height: 30px !important;
+                font-size: 22px !important;
+                line-height: 1.36 !important;
+                letter-spacing: normal !important;
+                text-align: left !important;
+                color: #005175 !important;
+            }
+
+            > .Line {
+                width: 820px !important;
+            }
+        }
+    }
+    .Rectangle-35 {
+        width: 470px !important;
+        height: 522px !important;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        margin-left: 70px !important;
+        margin-top: 25px !important;
+
+        > .container {
+            width: 390px !important;
+
+            > .Line {
+                width: 100% !important;
+            }
+
+            .optionGroup .userInputs {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .rangeSlider {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 310px;
+                    margin-right: 10px;
+
+                    .rangeInputControl {
+                        background: linear-gradient(to right, #1091cc 0%, #1091cc 50%, #cacaca 50%, #cacaca 100%);
+                        border: solid 1px #cacaca;
+                        border-radius: 8px;
+                        height: 7px;
+                        outline: none;
+                        transition: background 450ms ease-in;
+                        -webkit-appearance: none;
+                        width: 80% !important;
+                    }
+                }
+
+                
+                .loanSpan {
+                    display: block;
+                    .loan-amount {
+                        width: 375px !important;
+                    }
+                }
+                .annual-inputs {
+                    width: 170px !important;
+                }
+
+
+            }
+
+            #btn_calc {
+                width: 390px !important;
+                height: 40px;
+                border-radius: 4px;
+                background-color: #0077c0;
+                border: none;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+      }
+      .resultsBox {
+            visibility: visible !important;
+            position: relative;
+            width: 298px !important;
+            height: 440px !important;
+            background-color: #eaf6fa;
+            z-index: -1;
+            transform: translate(145%, -341px);
+
+            .container {
+                width: 192px !important;
+            }
+    }
+
+  }

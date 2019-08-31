@@ -1,0 +1,775 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Neue Light"), url("/assets/fonts/HelveticaNeueLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Neue Bold"), url("/assets/fonts/HelveticaNeueBold.woff") format("woff");
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+  width: 320px;
+  height: 900px;
+  background-color: #fff;
+  font-family: "Helvetica Neue Light", sans-serif;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing input::-webkit-outer-spin-button,
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing input[type=range] {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  border-radius: 6px;
+  height: 6px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #fff;
+  border: 1px solid #cacaca;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .Line {
+  width: 260px;
+  height: 2px;
+  border: solid 1px #cacaca;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .container {
+  width: 260px;
+  margin: auto;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .container .Mortgage-Calculator {
+  width: 220px;
+  height: 24px;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #006ea0;
+  padding-top: 23px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 {
+  width: 300px;
+  height: 431px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: auto;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .Change-values-to-cal {
+  padding-top: 15px;
+  width: 260px;
+  height: 20px;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.21px;
+  text-align: left;
+  color: #3e3d3f;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .Years-of-mortgage {
+  width: 109px;
+  height: 20px;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.17px;
+  text-align: left;
+  color: #3e3d3f;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .Rate-of-interest- {
+  width: 114px;
+  height: 20px;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.17px;
+  text-align: left;
+  color: #3e3d3f;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .rangeInputControl {
+  background: linear-gradient(to right, #1091cc 0%, #1091cc 50%, #cacaca 50%, #cacaca 100%);
+  border: solid 1px #cacaca;
+  border-radius: 8px;
+  height: 7px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 #form h1,
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 #form h3,
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 #btn_calc {
+  font-size: 12px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .optionGroup {
+  margin: 8px 0;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .optionGroup h3 {
+  margin: 8px 0;
+  font-family: "Helvetica Neue Bold", sans-serif;
+  font-weight: bold;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .optionGroup .userInputs {
+  display: flex;
+  align-items: center;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .rangeSlider {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-right: 10px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .loan-amount {
+  width: 242px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #a6a6a6;
+  background-color: #fff;
+  padding-left: 16px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .loan-amount:focus,
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .annual-inputs:focus {
+  outline: none;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);
+  border: solid 1px #3e3d3f;
+  background-color: #fff;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .loanSpan {
+  position: relative;
+  display: inline-block;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .loanSpan:before {
+  content: "$";
+  font-size: 14px;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .annual-inputs {
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #a6a6a6;
+  background-color: #fff;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .valNumbers {
+  width: 16px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .inputValue {
+  width: 50px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #a6a6a6;
+  background-color: #fff;
+  text-align: center;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .two-opts {
+  display: flex;
+  justify-content: space-between;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .subOptionGroup .userInputs input {
+  width: 102px;
+  padding-left: 16px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 #btn_calc {
+  width: 260px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #0077c0;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .submit {
+  width: 79px;
+  height: 17px;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.58px;
+  text-align: center;
+  color: #fff;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .resultsBox {
+  visibility: hidden;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .resultsBox.show {
+  visibility: visible;
+  position: relative;
+  width: 300px;
+  height: 289px;
+  background-color: #eaf6fa;
+  z-index: -1;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .resultList div {
+  display: flex;
+  justify-content: space-between;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .Your-results {
+  width: 108px;
+  height: 30px;
+  font-family: HelveticaNeue;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3e3d3f;
+  padding-top: 41px;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .Principle-Interest {
+  width: 98px;
+  height: 14px;
+  font-family: SFUIDisplay;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3e3d3f;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .firstBalance {
+  width: 59px;
+  height: 16px;
+  font-family: SFUIDisplay;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #3e3d3f;
+}
+.Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .totalBalance {
+  width: 76px;
+  height: 21px;
+  font-family: SFUIDisplay;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #3e3d3f;
+}
+
+@media screen and (min-device-width: 321px) {
+  .Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+    width: 100%;
+  }
+  .Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper {
+    width: 90%;
+  }
+  .Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 {
+    width: 100%;
+  }
+}
+@media screen and (min-device-width: 900px) {
+  .Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
+    background-color: whitesmoke;
+    width: 900px;
+    height: 700px;
+    margin: auto;
+  }
+
+  .wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .wrapper > .container {
+    width: 390px !important;
+    margin-left: 30px !important;
+  }
+  .wrapper > .container h1 {
+    width: 654.9px !important;
+    height: 30px !important;
+    font-size: 22px !important;
+    line-height: 1.36 !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+    color: #005175 !important;
+  }
+  .wrapper > .container > .Line {
+    width: 820px !important;
+  }
+
+  .Rectangle-35 {
+    width: 470px !important;
+    height: 522px !important;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-left: 70px !important;
+    margin-top: 25px !important;
+  }
+  .Rectangle-35 > .container {
+    width: 390px !important;
+  }
+  .Rectangle-35 > .container > .Line {
+    width: 100% !important;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs .rangeSlider {
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+    margin-right: 10px;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs .rangeSlider .rangeInputControl {
+    background: linear-gradient(to right, #1091cc 0%, #1091cc 50%, #cacaca 50%, #cacaca 100%);
+    border: solid 1px #cacaca;
+    border-radius: 8px;
+    height: 7px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    width: 80% !important;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs .loanSpan {
+    display: block;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs .loanSpan .loan-amount {
+    width: 375px !important;
+  }
+  .Rectangle-35 > .container .optionGroup .userInputs .annual-inputs {
+    width: 170px !important;
+  }
+  .Rectangle-35 > .container #btn_calc {
+    width: 390px !important;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #0077c0;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .resultsBox {
+    visibility: visible !important;
+    position: relative;
+    width: 298px !important;
+    height: 440px !important;
+    background-color: #eaf6fa;
+    z-index: -1;
+    transform: translate(145%, -341px);
+  }
+  .resultsBox .container {
+    width: 192px !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
