@@ -355,6 +355,10 @@ $black-shadowest-color: rgba(62, 61, 63, 0.62);
 
             .Rectangle-35 {
                 width: 100%;
+                
+                .resultsBox.show {
+                    width: 100%;
+                }
             }
         }
     }
@@ -465,6 +469,22 @@ $black-shadowest-color: rgba(62, 61, 63, 0.62);
 
             .container {
                 width: 192px !important;
+                
+                  
+                  .resultList > div {
+                    flex-direction:column;
+                    align-items: flex-start;
+                    margin: 20px auto;
+                  }
+                  .resultList > div span:nth-child(2) {
+                    text-align: left !important;
+                    margin: 5px 0;
+                    opacity: 0.2;
+                  }
+                  
+                  .resultList hr:not(:last-of-type) {
+                    display: none;
+                  }
             }
     }
 

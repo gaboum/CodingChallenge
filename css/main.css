@@ -673,6 +673,9 @@ textarea {
   .Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 {
     width: 100%;
   }
+  .Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .resultsBox.show {
+    width: 100%;
+  }
 }
 @media screen and (min-device-width: 900px) {
   .Category-page---v2---mobile---Mortgage-Calculator-v02---writing {
@@ -769,6 +772,19 @@ textarea {
   }
   .resultsBox .container {
     width: 192px !important;
+  }
+  .resultsBox .container .resultList > div {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px auto;
+  }
+  .resultsBox .container .resultList > div span:nth-child(2) {
+    text-align: left !important;
+    margin: 5px 0;
+    opacity: 0.2;
+  }
+  .resultsBox .container .resultList hr:not(:last-of-type) {
+    display: none;
   }
 }
 
