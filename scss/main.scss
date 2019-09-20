@@ -207,8 +207,11 @@ $black-shadowest-color: rgba(62, 61, 63, 0.62);
                   font-size: 14px;
                   position: absolute;
                   left: 8px;
-                  top: 50%;
-                  transform: translateY(-50%);
+                  height: 45px;
+                  display: flex;
+                  align-items: center;
+                //   top: 50%;
+                //   transform: translateY(-50%);
               }
               .annual-inputs {
                   width: 120px;

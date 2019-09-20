@@ -28,18 +28,32 @@ function moveRangeSlider(){
     
 }
 
+const captialize = words => words.split(' ').map( w =>  w.substring(0,1).toUpperCase()+ w.substring(1)).join(' ');
+
 
 function displayErrorFields() {
+    removeDisplayErrors();
+    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    let txt = "Mandatory Field";
+
     let reqFields = document.querySelectorAll('.loanSpan');
     for (let i = 0; i <= reqFields.length - 1; i++) {
-        let txt = 'Mandatory field';
+        
+        
         let node = document.createElement('span');
-        node.innerText = txt;
         node.classList.add("error-field");
         node.style.color = "#da3535";
         node.style.fontSize = "10px";
         reqFields[i].appendChild(node);
+        if (w >= 900 ) {
+            node.innerText = captialize(node.previousSibling.id.replace('-',' ')) + " is mandatory";
+        } else {
+            node.innerText = txt;
+        }
         node.previousSibling.style.border = "2px solid #da3535";
+        
+        
     }
 }
 function removeDisplayErrors() {

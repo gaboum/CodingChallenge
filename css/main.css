@@ -541,8 +541,9 @@ textarea {
   font-size: 14px;
   position: absolute;
   left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 45px;
+  display: flex;
+  align-items: center;
 }
 .Category-page---v2---mobile---Mortgage-Calculator-v02---writing .wrapper .Rectangle-35 .annual-inputs {
   width: 120px;
